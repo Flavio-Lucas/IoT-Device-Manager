@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 2rem;
+
+  h1 {
+    height: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: .5rem;
+
+    svg {
+      margin-right: 1rem;
+    }
+
+    &:hover {
+      background: #dbdbdb;
+    }
+  }
+}
