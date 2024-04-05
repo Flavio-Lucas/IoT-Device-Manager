@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  api: {
+    baseUrl: '',
+  },
+  configuration: {
+    routeToRedirectWhenAuthenticated: '/login',
+    routeToRedirectWhenUnAuthenticated: '/home',
+  },
+  keys: {
+    token: 'BASIC_TOKEN'
+  }
 };
 
 /*
