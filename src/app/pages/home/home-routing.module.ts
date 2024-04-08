@@ -5,8 +5,23 @@ import { HomeComponent } from "./home.component";
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
-  }
+    component: HomeComponent,
+    children: [
+      {
+        path: 'create',
+        loadChildren: () => import('./create/create.module').then(m => m.CreateModule),
+      },
+      {
+        path: 'list',
+        loadChildren: () => import('./list/list.module').then(m => m.ListModule),
+      },
+      {
+        path: '',
+        redirectTo: 'list',
+        pathMatch: 'full'
+      }
+    ]
+  },
 ];
 
 @NgModule({

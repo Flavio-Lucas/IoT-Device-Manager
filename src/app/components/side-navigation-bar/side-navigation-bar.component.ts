@@ -18,12 +18,12 @@ export class SideNavigationBarComponent {
   public menuItems: MenuItems[] = [
     {
       name: 'Criar',
-      link: '', // TODO: Adicionar a rota mais tarde
+      link: '/home/create', // TODO: Adicionar a rota mais tarde
       iconUrl: 'assets/icons/plus-circle.svg',
     },
     {
       name: 'Listar',
-      link: '', // TODO: Adicionar a rota mais tarde
+      link: '/home/list', // TODO: Adicionar a rota mais tarde
       iconUrl: 'assets/icons/list.svg',
     },
   ]
