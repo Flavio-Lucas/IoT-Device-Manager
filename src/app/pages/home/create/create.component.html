@@ -1,17 +1,17 @@
 <form [formGroup]="deviceForm" (submit)="registerDevice()">
-  <div>
+  <div class="input-container">
     <label for="identifier">Identificador:</label>
     <input type="text" id="identifier" formControlName="identifier">
   </div>
-  <div>
+  <div class="input-container">
     <label for="description">Descrição:</label>
     <input type="text" id="description" formControlName="description">
   </div>
-  <div>
+  <div class="input-container">
     <label for="manufacturer">Fabricante:</label>
     <input type="text" id="manufacturer" formControlName="manufacturer">
   </div>
-  <div>
+  <div class="input-container">
     <label for="url">URL:</label>
     <input type="text" id="url" formControlName="url">
   </div>
