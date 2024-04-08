@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DeviceService } from '../../../services/device/device.service';
 
 @Component({
   selector: 'app-create',
@@ -7,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private deviceService: DeviceService,
+  ) { }
 
-  public ngOnInit(): void { }
+  public devices: string[] = [];
+
+  public async ngOnInit(): Promise<void> {
+    this.devices = await this.deviceService.getDevices();
+    console.log(this.devices)
+  }
 
 }

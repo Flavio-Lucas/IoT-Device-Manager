@@ -4,8 +4,12 @@
 
 export const environment = {
   production: false,
+  isMock: true,
   api: {
     baseUrl: '',
+    devices: {
+      getMany: '/device',
+    }
   },
   configuration: {
     routeToRedirectWhenAuthenticated: '/login',
