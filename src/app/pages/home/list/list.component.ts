@@ -19,4 +19,12 @@ export class ListComponent implements OnInit {
     console.log(this.devices)
   }
 
+  public openEdit(): void {
+    // TODO: Implementar assim que possível
+  }
+
+  public exclude(): void {
+    // TODO: Implementar assim que possível
+  }
+
 }
