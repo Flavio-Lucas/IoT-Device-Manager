@@ -6,9 +6,10 @@ export const environment = {
   production: false,
   isMock: true,
   api: {
-    baseUrl: '',
+    baseUrl: '',// A parte que não se altera da url da sua api. ex.: https://urldaminhaapi.com
     devices: {
-      getMany: '/device',
+      base: '/device',
+      byId: '/device/{id}'
     }
   },
   configuration: {

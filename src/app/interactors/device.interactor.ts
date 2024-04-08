@@ -17,6 +17,6 @@ export class DeviceInteractor {
     if (environment.isMock) {
       return Promise.resolve({ success: { items: ['1', '2'] } });
     }
-    return await this.http.get<DeviceList>(environment.api.devices.getMany);
+    return await this.http.get<DeviceList>(environment.api.devices.base);
   }
 }

@@ -1,1 +1,6 @@
-<p>list works!</p>
+<ul class="device-list">
+  <li class="device-list--item" *ngFor="let device of devices">
+    <span>Identificador: {{device}}</span>
+    <button class="device-list--item--edit">Editar</button>
+  </li>
+</ul>

@@ -1,0 +1,36 @@
+.device-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: .5rem;
+
+  &--item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    width: 100%;
+    transition: all ease-in-out 255ms;
+    font-size: 1.5rem;
+
+    &--edit {
+      outline: none;
+      cursor: pointer;
+      border: none;
+      background: none;
+      padding: .5rem 1rem;
+
+      &:hover {
+        outline: none;
+        border: none;
+        background: #cdcdcd;
+      }
+    }
+
+    &:hover {
+      background: #dbdbdb;
+      transition: all ease-in-out 255ms;
+    }
+  }
+}

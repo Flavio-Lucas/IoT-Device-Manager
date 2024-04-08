@@ -15,9 +15,11 @@
       font-size: 1.5rem;
       gap: 1rem;
       cursor: pointer;
+      transition: all ease-in-out 255ms;
 
       &:hover {
-        background: #a2a2a2;
+        background: #dbdbdb;
+        transition: all ease-in-out 255ms;
       }
 
       app-svg-display {

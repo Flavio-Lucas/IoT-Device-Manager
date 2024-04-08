@@ -6,8 +6,8 @@ import { ListComponent } from './list.component';
 import { DeviceList } from '../../../models/proxies/device-list.proxy';
 import { ListRoutingModule } from './list-routing.module';
 import { CommonModule } from '@angular/common';
-import {HttpModule} from "../../../modules/http/http.module";
-import {environment} from "../../../../environments/environment";
+import { HttpModule } from '../../../modules/http/http.module';
+import { environment } from '../../../../environments/environment';
 
 describe('ListComponent', () => {
   let deviceService: DeviceService;
