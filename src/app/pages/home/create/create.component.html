@@ -1,1 +1,19 @@
-<p>create works!</p>
+<form [formGroup]="deviceForm" (submit)="registerDevice()">
+  <div>
+    <label for="identifier">Identificador:</label>
+    <input type="text" id="identifier" formControlName="identifier">
+  </div>
+  <div>
+    <label for="description">Descrição:</label>
+    <input type="text" id="description" formControlName="description">
+  </div>
+  <div>
+    <label for="manufacturer">Fabricante:</label>
+    <input type="text" id="manufacturer" formControlName="manufacturer">
+  </div>
+  <div>
+    <label for="url">URL:</label>
+    <input type="text" id="url" formControlName="url">
+  </div>
+  <button type="submit" [disabled]="!deviceForm.valid">Register Device</button>
+</form>

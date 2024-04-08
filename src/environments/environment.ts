@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  isMock: true,
+  isMock: true, // TODO: Desabilitar quando houver o link para a API
   api: {
     baseUrl: '',// A parte que não se altera da url da sua api. ex.: https://urldaminhaapi.com
     devices: {

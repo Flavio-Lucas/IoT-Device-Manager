@@ -8,6 +8,7 @@ import { ListRoutingModule } from './list-routing.module';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '../../../modules/http/http.module';
 import { environment } from '../../../../environments/environment';
+import {ToastrModule} from "ngx-toastr";
 
 describe('ListComponent', () => {
   let deviceService: DeviceService;
@@ -20,6 +21,7 @@ describe('ListComponent', () => {
           baseUrl: environment.api.baseUrl,
           bearerTokenKey: environment.keys.token,
         }),
+        ToastrModule.forRoot(),
         HttpClientTestingModule,
         ListRoutingModule,
         CommonModule

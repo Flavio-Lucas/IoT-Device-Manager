@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { DeviceInteractor } from '../../interactors/device.interactor';
 import { ToastrService } from 'ngx-toastr';
+import { DeviceProxy } from '../../models/proxies/device.proxy';
 
 @Injectable({
   providedIn: 'root',
@@ -20,5 +21,16 @@ export class DeviceService {
     }
 
     return response.success?.items || [];
+  }
+
+  public async newDevice(payload: DeviceProxy): Promise<void> {
+    const response = await this.interactor.newDevice(payload);
+
+    if (response.error)
+      this.toast.error(response.error.message || 'Um erro inesperado impediu que os dispositivos fossem listados, tente novamente mais tarde.')
+    else
+      this.toast.success('Dispositivo cadastrado com sucesso.')
+
+    return response.success;
   }
 }
