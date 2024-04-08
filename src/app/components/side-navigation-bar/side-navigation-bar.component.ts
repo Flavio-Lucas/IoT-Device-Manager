@@ -19,7 +19,7 @@ export class SideNavigationBarComponent {
     {
       name: 'Criar',
       link: '', // TODO: Adicionar a rota mais tarde
-      iconUrl: 'assets/icons/list.svg',
+      iconUrl: 'assets/icons/plus-circle.svg',
     },
     {
       name: 'Listar',

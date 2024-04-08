@@ -2,4 +2,27 @@
   height: 100%;
   padding: 8rem 2rem 4rem;
   background: #cdcdcd;
+
+  ul {
+    padding: 2rem 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.5rem;
+      gap: 1rem;
+      cursor: pointer;
+
+      &:hover {
+        background: #a2a2a2;
+      }
+
+      app-svg-display {
+        width: 2rem;
+      }
+    }
+  }
 }
