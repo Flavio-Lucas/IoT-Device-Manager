@@ -1,0 +1,9 @@
+<div class="side-navigation-bar">
+  Telas:
+  <ul>
+    <li [routerLink]="i.link" *ngFor="let i of menuItems">
+      <app-svg-display [svgPath]="i.iconUrl"></app-svg-display>
+      <span>{{i.name}}</span>
+    </li>
+  </ul>
+</div>

@@ -1,2 +1,9 @@
-
-<app-header>home works!</app-header>
+<div class="home">
+  <app-side-navigation-bar></app-side-navigation-bar>
+  <main class="home--container">
+    <app-header></app-header>
+    <div class="home--container--content">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>
