@@ -1,27 +1,83 @@
-# IotDevicesApp
+# Desafio Front-End Angular - Aplicativo de Dispositivos IoT
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+Este projeto é parte do processo seletivo para a vaga de Desenvolvedor Front-End Angular no Centro de Pesquisas Avançadas Wernher von Braun.
 
-## Development server
+## Sobre o Projeto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+O projeto consiste em desenvolver uma interface de usuário em Angular para uma aplicação de cadastro e compartilhamento de acesso à dispositivos de IoT. Os usuários podem autenticar-se na aplicação, cadastrar novos dispositivos, visualizar uma lista de dispositivos cadastrados, editar informações dos dispositivos e excluir dispositivos da plataforma.
 
-## Code scaffolding
+## Instruções de Uso
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Pré-requisitos
 
-## Build
+- Node.js e npm instalados
+- Angular CLI instalado (`npm install -g @angular/cli`)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Instalação
 
-## Running unit tests
+1. Clone este repositório: `git clone https://github.com/seu-usuario/seu-repositorio.git`
+2. Navegue até o diretório do projeto: `cd seu-repositorio`
+3. Instale as dependências: `npm install`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Execução
 
-## Running end-to-end tests
+1. Inicie a aplicação: `ng serve`
+2. Acesse a aplicação em: `http://localhost:4200`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Uso
 
-## Further help
+- Faça o login na aplicação utilizando suas credenciais.
+- Clique em "Criar" para adicionar um novo dispositivo.
+- Visualize a lista de dispositivos cadastrados na página inicial.
+- Clique em "Editar" para modificar as informações de um dispositivo.
+- Clique em "Excluir" para remover um dispositivo.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Decisões de Design e Implementação
+
+### Design
+
+- A interface do usuário foi projetada seguindo os princípios de usabilidade e design limpo.
+- A ideia da interface era que fosse a mais simples possível, a fim de aproveitar melhor o tempo de desenvolvimento e garantir uma melhor qualidade de código.
+- Foi utilizado um layout simples para garantir uma boa experiência de usuário em diferentes dispositivos.
+
+### Implementação
+
+- Foi utilizada a arquitetura de componentes do Angular para modularizar o código.
+- Foram implementadas medidas de segurança para proteger os dados dos usuários, assim como o Guard de autenticação que não permite que determinadas telas sejam acessadas sem que o usuário esteja devidamente logado.
+
+## Testes Unitários
+
+Foram adicionados testes unitários para verificar o comportamento dos componentes e serviços da aplicação em uma escala simples. Mais testes podem ser adicionados para cobrir mais cenários e garantir a qualidade do código.
+
+## Melhorias Futuras
+
+- Extender a cobertura dos testes no projeto.
+- Componentizar ainda mais os elementos.
+- Adicionar funcionalidades avançadas, como filtros de pesquisa e ordenação na lista de dispositivos.
+- Melhorar a interface de usuário com animações e microinterações.
+- Adicionar um fluxo mais direto no cadastro e edição de um dispositivo.
+- Adicionar uma função que trate as mensagens de erro de forma mais adequada e padronizada.
+
+# Ajuda sobre o repositório.
+
+Esse projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) na versão 13.2.5.
+
+## Servidor de Desenvolvimento
+
+Execute `ng serve` para iniciar um servidor de desenvolvimento. Navegue para `http://localhost:4200/`. O aplicativo será recarregado automaticamente se você alterar algum dos arquivos de origem.
+
+## Geração de Código
+
+Execute `ng generate component nome-do-componente` para gerar um novo componente. Você também pode usar `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Compilação
+
+Execute `ng build` para compilar o projeto. Os artefatos de compilação serão armazenados no diretório `dist/`.
+
+## Execução de Testes Unitários
+
+Execute `ng test` para executar os testes unitários via [Karma](https://karma-runner.github.io).
+
+## Ajuda Adicional
+
+Para obter mais ajuda sobre o Angular CLI, use `ng help` ou consulte a [Página de Visão Geral e Referência de Comandos do Angular CLI](https://angular.io/cli).
