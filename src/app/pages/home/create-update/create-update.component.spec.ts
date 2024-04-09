@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CreateComponent } from './create.component';
+import { CreateUpdateComponent } from './create-update.component';
 import { Router } from '@angular/router';
 import { DeviceService } from '../../../services/device/device.service';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -11,14 +11,14 @@ import {environment} from "../../../../environments/environment";
 import {HttpClientTestingModule} from "@angular/common/http/testing";
 
 describe('CreateComponent', () => {
-  let component: CreateComponent;
-  let fixture: ComponentFixture<CreateComponent>;
+  let component: CreateUpdateComponent;
+  let fixture: ComponentFixture<CreateUpdateComponent>;
   let router: Router;
   let deviceService: DeviceService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CreateComponent ],
+      declarations: [ CreateUpdateComponent ],
       imports: [
         HttpModule.withConfig({
           baseUrl: environment.api.baseUrl,
@@ -33,7 +33,7 @@ describe('CreateComponent', () => {
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CreateComponent);
+    fixture = TestBed.createComponent(CreateUpdateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
     router = TestBed.inject(Router);

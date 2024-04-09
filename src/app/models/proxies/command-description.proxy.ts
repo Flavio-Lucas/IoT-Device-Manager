@@ -1,10 +1,10 @@
-import { Command } from "@angular/cli/models/command";
+import { CommandProxy } from './command.proxy';
 
 export class CommandDescriptionProxy {
   constructor(
     operation: string,
     description: string,
-    command: Command,
+    command: CommandProxy,
     result: string,
     format: string,
   ) {
@@ -22,7 +22,7 @@ export class CommandDescriptionProxy {
   public description: string;
 
   // Referência à entidade Command
-  public command: Command;
+  public command: CommandProxy;
 
   // Descrição do resultado esperado da execução do comando
   public result: string;

@@ -2,8 +2,8 @@
   <li class="device-list--item" *ngFor="let device of devices">
     <span>Identificador: {{device}}</span>
     <div>
-      <button (click)="openEdit()" class="device-list--item--edit">Editar</button>
-      <button (click)="exclude()" class="device-list--item--edit">Apagar</button>
+      <button (click)="openEdit(device)" class="device-list--item--edit">Editar</button>
+      <button (click)="exclude(device)" class="device-list--item--edit">Apagar</button>
     </div>
   </li>
 </ul>

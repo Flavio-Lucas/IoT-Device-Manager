@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DeviceService } from '../../../services/device/device.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-create',
@@ -10,6 +11,7 @@ export class ListComponent implements OnInit {
 
   constructor(
     private deviceService: DeviceService,
+    private router: Router,
   ) { }
 
   public devices: string[] = [];
@@ -19,11 +21,11 @@ export class ListComponent implements OnInit {
     console.log(this.devices)
   }
 
-  public openEdit(): void {
-    // TODO: Implementar assim que possível
+  public async openEdit(identifier: string): Promise<void> {
+    await this.router.navigateByUrl('/home/edit/' + identifier);
   }
 
-  public exclude(): void {
+  public exclude(identifier: string): void {
     // TODO: Implementar assim que possível
   }
 

@@ -1,0 +1,86 @@
+<h1>{{(isUpdate ? 'Atualizar' : 'Criar Novo') + ' Dispositivo'}}</h1>
+<br>
+<br>
+<button *ngIf="!isCreatingCommand" (click)="enableCommandCreation()">
+  Adicionar Comando
+</button>
+
+<ng-container *ngIf="commands.length">
+  <h2>Comandos adicionados:</h2>
+  <div class="command-card" *ngFor="let command of commands">
+    <hr>
+    <div>comando: {{command.command.command}}</div>
+    <div>descrição: {{command.description}}</div>
+    <hr>
+  </div>
+
+</ng-container>
+
+<ng-container *ngIf="isCreatingCommand">
+
+  <h1>Adicionar comandos:</h1>
+  <br>
+  <br>
+
+  <form [formGroup]="commandDescriptionForm">
+    <div class="input-container">
+      <label for="command">Comando:</label>
+      <input id="command" type="text" formControlName="command">
+    </div>
+
+    <div class="input-container">
+      <label for="parameters">Parametros:</label>
+      <input #parameterName placeholder="name" id="parameters" type="text">
+      <input #parameterDescription placeholder="descrição" type="text">
+      <button (click)="addParameter(parameterName.value, parameterDescription.value)">adicionar parametro</button>
+      <span
+        *ngFor="let parameter of commandDescriptionForm.getRawValue().parameters">{{parameter.name + ', ' + parameter.description}}</span>
+    </div>
+
+    <div class="input-container">
+      <label for="result">Resultado esperado:</label>
+      <input type="text" id="result" formControlName="result">
+    </div>
+    <div class="input-container">
+      <label for="command-description">Descrição:</label>
+      <input id="command-description" type="text" formControlName="description">
+    </div>
+    <div class="input-container">
+      <label for="format">Formato do comando:</label>
+      <input id="format" type="text" formControlName="format">
+    </div>
+    <div class="input-container">
+      <label for="operation">Operação:</label>
+      <input id="operation" type="text" formControlName="operation">
+    </div>
+
+    <button (click)="addCommand()">Salvar</button>
+  </form>
+</ng-container>
+
+
+<form [formGroup]="deviceForm">
+
+  <div class="input-container">
+    <label for="identifier">Identificador:</label>
+    <input type="text" id="identifier" formControlName="identifier">
+  </div>
+  <div class="input-container">
+    <label for="description">Descrição:</label>
+    <input type="text" id="description" formControlName="description">
+  </div>
+  <div class="input-container">
+    <label for="manufacturer">Fabricante:</label>
+    <input type="text" id="manufacturer" formControlName="manufacturer">
+  </div>
+  <div class="input-container">
+    <label for="url">URL:</label>
+    <input type="text" id="url" formControlName="url">
+  </div>
+</form>
+
+<button (click)="submitDevice()"
+        [disabled]="!deviceForm.valid || !commands.length"
+>
+  {{(isUpdate ? 'Atualizar' : 'Registrar') + ' Dispositivo'}}
+</button>

@@ -9,7 +9,11 @@ const routes: Routes = [
     children: [
       {
         path: 'create',
-        loadChildren: () => import('./create/create.module').then(m => m.CreateModule),
+        loadChildren: () => import('./create-update/create-update.module').then(m => m.CreateUpdateModule),
+      },
+      {
+        path: 'edit/:id',
+        loadChildren: () => import('./create-update/create-update.module').then(m => m.CreateUpdateModule),
       },
       {
         path: 'list',

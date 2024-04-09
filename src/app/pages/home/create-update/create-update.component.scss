@@ -14,15 +14,16 @@ form {
       outline: none;
     }
   }
+}
 
-  button {
-    border: none;
-    outline: none;
-    padding: 1rem;
-    cursor: pointer;
+button {
+  border: none;
+  outline: none;
+  padding: 1rem;
+  cursor: pointer;
+  width: 100%;
 
-    &:disabled {
-      cursor: not-allowed;
-    }
+  &:disabled {
+    cursor: not-allowed;
   }
 }
