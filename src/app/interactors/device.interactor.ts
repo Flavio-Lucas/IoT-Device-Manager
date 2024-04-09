@@ -65,4 +65,12 @@ export class DeviceInteractor {
     const url = environment.api.devices.byId.replace('{id}', id);
     return await this.http.put<DeviceProxy>(url, payload);
   }
+
+  public async exclude(id: string): Promise<AsyncResult<void>> {
+    if (environment.isMock) {
+      return { success: undefined };
+    }
+    const url = environment.api.devices.byId.replace('{id}', id);
+    return await this.http.delete(url);
+  }
 }

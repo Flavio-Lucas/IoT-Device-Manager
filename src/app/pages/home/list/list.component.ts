@@ -25,8 +25,10 @@ export class ListComponent implements OnInit {
     await this.router.navigateByUrl('/home/edit/' + identifier);
   }
 
-  public exclude(identifier: string): void {
-    // TODO: Implementar assim que possível
+  public async exclude(identifier: string): Promise<void> {
+    await this.deviceService.exclude(identifier).then(() => {
+      this.devices = this.devices.filter(device => device !== identifier);
+    });
   }
 
 }

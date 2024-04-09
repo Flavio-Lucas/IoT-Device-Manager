@@ -55,6 +55,19 @@ export class DeviceService {
     if (response.success)
       return response.success;
     else
-      throw new Error(response.error?.message);
+      throw new Error(response.error?.message || 'Um erro inesperado impediu que o dispositivo fosse recuperado, tente novamente mais tarde.');
+  }
+
+  public async exclude(id: string): Promise<void> {
+    const response = await this.interactor.exclude(id);
+
+    if (response.error) {
+      this.toast.error(response.error.message || 'Um erro inesperado aconteceu, tente novamente mais tarde.');
+      throw new Error(response.error.message || 'Um erro inesperado aconteceu, tente novamente mais tarde.');
+    } else {
+      this.toast.success('O dispositivo foi apagado com sucesso.');
+    }
+
+    return response.success;
   }
 }
